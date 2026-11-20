@@ -45,7 +45,7 @@ Assignment2.3 - project/
 └── requirements.txt         # Python dependencies
 ```
 
-`Venv/` and `Logs/` are local/runtime folders. They do not need to be committed to GitHub. The `.env` file contains local configuration and may contain secrets; **never commit it**.
+`Venv/` and `Logs/` are local/runtime folders. They do not need to be committed to GitHub. The `.env` file contains local configuration and credentials; 
 
 ## Prerequisites
 
