@@ -1,0 +1,9 @@
+store_id,store_name,city,state,region_cd,region_name,district_cd,district_name,sq_ft,open_date,status
+S001,Northgate,Albany,NY,R1,East,DS01,North,18000,2015-03-01,OPEN
+S002,Riverside,Utica,NY,R1,East,DS01,North,22000,2017-09-15,OPEN
+S003,Southpoint,Newark,NJ,R1,East,DS02,South,25000,2012-05-20,OPEN
+S004,Midtown,Denver,CO,R1,East,DS01,North,20000,2019-02-10,OPEN
+S005,Plaza,Boulder,CO,R2,West,DS03,Central,15000,2020-08-01,OPEN
+S006,Bayview,Oakland,CA,R2,West,DS04,Harbor,27000,2014-11-11,OPEN
+S007,Seaside,San Diego,CA,R2,West,DS04,Harbor,21000,2018-06-30,OPEN
+S008,Lakeshore,Chicago,IL,R2,West,DS03,Central,23000,2016-04-04,OPEN

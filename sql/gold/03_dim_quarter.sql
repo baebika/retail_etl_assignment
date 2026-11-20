@@ -1,0 +1,25 @@
+
+-- GOLD: DIM_QUARTER
+
+MERGE INTO RETAIL_DW.GOLD.DIM_QUARTER AS target
+
+USING (
+    SELECT
+        'Q' || QUARTER(TO_DATE('{BUSINESS_DATE}')) AS QUARTER_NAME,
+        YEAR(TO_DATE('{BUSINESS_DATE}')) AS YEAR
+) AS source
+
+ON target.QUARTER_NAME = source.QUARTER_NAME
+AND target."YEAR" = source.YEAR
+
+WHEN NOT MATCHED THEN
+    INSERT (
+        QUARTER_KY,
+        QUARTER_NAME,
+        "YEAR"
+    )
+    VALUES (
+        RETAIL_DW.GOLD.SEQ_QUARTER_KY.NEXTVAL,
+        source.QUARTER_NAME,
+        source.YEAR
+    );

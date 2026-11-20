@@ -1,0 +1,81 @@
+{
+  "days": {
+    "2026-11-10": {
+      "pos_raw_rows": 690,
+      "pos_raw_net": 24795.07,
+      "pos_quarantine_rows": 0,
+      "pos_quarantine_net": 0,
+      "pos_quarantine_by_reason": {},
+      "pos_gold_rows": 690,
+      "pos_gold_net": 24795.07,
+      "item_master_rows": 60,
+      "store_master_rows": 8,
+      "inventory_rows": 330,
+      "inventory_on_hand_sum": 14502
+    },
+    "2026-11-11": {
+      "pos_raw_rows": 791,
+      "pos_raw_net": 28898.0,
+      "pos_quarantine_rows": 0,
+      "pos_quarantine_net": 0,
+      "pos_quarantine_by_reason": {},
+      "pos_gold_rows": 791,
+      "pos_gold_net": 28898.0,
+      "item_master_rows": 60,
+      "store_master_rows": 8,
+      "inventory_rows": 330,
+      "inventory_on_hand_sum": 13775
+    },
+    "2026-11-12": {
+      "pos_raw_rows": 727,
+      "pos_raw_net": 26367.58,
+      "pos_quarantine_rows": 5,
+      "pos_quarantine_net": -7.91,
+      "pos_quarantine_by_reason": {
+        "NULL_ITEM_ID": 2,
+        "NEG_QTY": 1,
+        "ITEM_NOT_IN_MASTER": 1,
+        "DUP_LINE": 1
+      },
+      "pos_gold_rows": 722,
+      "pos_gold_net": 26375.49,
+      "item_master_rows": 60,
+      "store_master_rows": 8,
+      "inventory_rows": 330,
+      "inventory_on_hand_sum": 13216
+    },
+    "2026-11-13": {
+      "pos_raw_rows": 819,
+      "pos_raw_net": 30463.09,
+      "pos_quarantine_rows": 0,
+      "pos_quarantine_net": 0,
+      "pos_quarantine_by_reason": {},
+      "pos_gold_rows": 819,
+      "pos_gold_net": 30463.09,
+      "item_master_rows": 60,
+      "store_master_rows": 8,
+      "inventory_rows": 327,
+      "inventory_on_hand_sum": 12467
+    },
+    "2026-11-14": {
+      "pos_raw_rows": 1102,
+      "pos_raw_net": 39045.72,
+      "pos_quarantine_rows": 0,
+      "pos_quarantine_net": 0,
+      "pos_quarantine_by_reason": {},
+      "pos_gold_rows": 1102,
+      "pos_gold_net": 39045.72,
+      "item_master_rows": 63,
+      "store_master_rows": 9,
+      "inventory_rows": 392,
+      "inventory_on_hand_sum": 13189
+    }
+  },
+  "dimensions": {
+    "dim_item_total_rows_after_day5": 64,
+    "dim_item_current_rows_after_day5": 63,
+    "dim_locn_total_rows_after_day5": 10,
+    "dim_locn_current_rows_after_day5": 9,
+    "scd1_check": "ITM00015 item_name is corrected on all versions from day 4 (no new version created)"
+  }
+}

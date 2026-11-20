@@ -1,0 +1,25 @@
+
+# Python virtual environment
+Venv/
+venv/
+.venv/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Airflow logs
+Logs/
+logs/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Temporary files
+*.log
+.DS_Store
+
+# Local Airflow configuration and credentials
+config/airflow.cfg
+config/settings.yaml

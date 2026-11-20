@@ -1,0 +1,29 @@
+
+-- GOLD: DIM_MONTH
+
+MERGE INTO RETAIL_DW.GOLD.DIM_MONTH AS target
+
+USING (
+    SELECT
+        TO_VARCHAR(TO_DATE('{BUSINESS_DATE}'), 'MMMM') AS MONTH_NAME,
+        q.QUARTER_KY
+    FROM RETAIL_DW.GOLD.DIM_QUARTER q
+    WHERE q.QUARTER_NAME =
+        'Q' || QUARTER(TO_DATE('{BUSINESS_DATE}'))
+      AND q."YEAR" = YEAR(TO_DATE('{BUSINESS_DATE}'))
+) AS source
+
+ON target.MONTH_NAME = source.MONTH_NAME
+AND target.QUARTER_KY = source.QUARTER_KY
+
+WHEN NOT MATCHED THEN
+    INSERT (
+        MONTH_KY,
+        MONTH_NAME,
+        QUARTER_KY
+    )
+    VALUES (
+        RETAIL_DW.GOLD.SEQ_MONTH_KY.NEXTVAL,
+        source.MONTH_NAME,
+        source.QUARTER_KY
+    );

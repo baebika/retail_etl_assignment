@@ -1,0 +1,61 @@
+item_id,item_name,brand,department_cd,department_name,class_cd,class_name,subclass_cd,subclass_name,unit_cost,unit_retail,status
+ITM00001,Valley Farm Cola 330ml,Valley Farm,D10,Grocery,C101,Beverages,S1011,Soft Drinks,9.22,13.33,ACTIVE
+ITM00002,FreshCo Cola 500ml,FreshCo,D10,Grocery,C101,Beverages,S1011,Soft Drinks,23.68,41.40,ACTIVE
+ITM00003,Valley Farm Cola 1L,Valley Farm,D10,Grocery,C101,Beverages,S1011,Soft Drinks,20.69,32.18,ACTIVE
+ITM00004,FreshCo Cola Family Pack,FreshCo,D10,Grocery,C101,Beverages,S1011,Soft Drinks,6.02,9.21,ACTIVE
+ITM00005,Valley Farm Cola Mini Pack,Valley Farm,D10,Grocery,C101,Beverages,S1011,Soft Drinks,7.33,11.22,ACTIVE
+ITM00006,FreshCo Orange Juice 330ml,FreshCo,D10,Grocery,C101,Beverages,S1012,Juice,15.82,26.00,ACTIVE
+ITM00007,Valley Farm Orange Juice 500ml,Valley Farm,D10,Grocery,C101,Beverages,S1012,Juice,26.58,41.03,ACTIVE
+ITM00008,FreshCo Orange Juice 1L,FreshCo,D10,Grocery,C101,Beverages,S1012,Juice,17.10,29.95,ACTIVE
+ITM00009,Valley Farm Orange Juice Family Pack,Valley Farm,D10,Grocery,C101,Beverages,S1012,Juice,22.98,33.84,ACTIVE
+ITM00010,FreshCo Orange Juice Mini Pack,FreshCo,D10,Grocery,C101,Beverages,S1012,Juice,16.33,26.51,ACTIVE
+ITM00011,Valley Farm Potato Chips 330ml,Valley Farm,D10,Grocery,C102,Snacks,S1021,Chips,6.71,12.56,ACTIVE
+ITM00012,FreshCo Potato Chips 500ml,FreshCo,D10,Grocery,C102,Snacks,S1021,Chips,6.73,11.83,ACTIVE
+ITM00013,Valley Farm Potato Chips 1L,Valley Farm,D10,Grocery,C102,Snacks,S1021,Chips,2.97,5.64,ACTIVE
+ITM00014,FreshCo Potato Chips Family Pack,FreshCo,D10,Grocery,C102,Snacks,S1021,Chips,26.24,36.16,ACTIVE
+ITM00015,Vaalley Farm Potato Chips Mini Pack,Valley Farm,D10,Grocery,C102,Snacks,S1021,Chips,6.16,10.87,ACTIVE
+ITM00016,FreshCo Fruit Gummies 330ml,FreshCo,D10,Grocery,C102,Snacks,S1022,Candy,26.43,45.17,ACTIVE
+ITM00017,Valley Farm Fruit Gummies 500ml,Valley Farm,D10,Grocery,C102,Snacks,S1022,Candy,13.97,25.78,ACTIVE
+ITM00018,FreshCo Fruit Gummies 1L,FreshCo,D10,Grocery,C102,Snacks,S1022,Candy,3.57,5.89,ACTIVE
+ITM00019,Valley Farm Fruit Gummies Family Pack,Valley Farm,D10,Grocery,C102,Snacks,S1022,Candy,13.75,19.20,ACTIVE
+ITM00020,FreshCo Fruit Gummies Mini Pack,FreshCo,D10,Grocery,C102,Snacks,S1022,Candy,22.03,39.47,ACTIVE
+ITM00021,BrightLiving Frying Pan Small,BrightLiving,D20,Home,C201,Kitchen,S2011,Cookware,2.01,3.01,ACTIVE
+ITM00022,HomeEase Frying Pan Medium,HomeEase,D20,Home,C201,Kitchen,S2011,Cookware,5.10,7.50,ACTIVE
+ITM00023,BrightLiving Frying Pan Large,BrightLiving,D20,Home,C201,Kitchen,S2011,Cookware,22.80,34.59,ACTIVE
+ITM00024,HomeEase Frying Pan Pro,HomeEase,D20,Home,C201,Kitchen,S2011,Cookware,3.11,4.28,ACTIVE
+ITM00025,BrightLiving Frying Pan Set of 3,BrightLiving,D20,Home,C201,Kitchen,S2011,Cookware,25.10,42.08,ACTIVE
+ITM00026,HomeEase Cooking Spoon Small,HomeEase,D20,Home,C201,Kitchen,S2012,Utensils,23.45,35.71,ACTIVE
+ITM00027,BrightLiving Cooking Spoon Medium,BrightLiving,D20,Home,C201,Kitchen,S2012,Utensils,24.73,36.06,ACTIVE
+ITM00028,HomeEase Cooking Spoon Large,HomeEase,D20,Home,C201,Kitchen,S2012,Utensils,7.87,13.37,ACTIVE
+ITM00029,BrightLiving Cooking Spoon Pro,BrightLiving,D20,Home,C201,Kitchen,S2012,Utensils,11.52,16.63,ACTIVE
+ITM00030,HomeEase Cooking Spoon Set of 3,HomeEase,D20,Home,C201,Kitchen,S2012,Utensils,19.79,28.81,ACTIVE
+ITM00031,BrightLiving Laundry Detergent Small,BrightLiving,D20,Home,C202,Cleaning,S2021,Detergent,1.61,2.42,ACTIVE
+ITM00032,HomeEase Laundry Detergent Medium,HomeEase,D20,Home,C202,Cleaning,S2021,Detergent,22.59,34.50,ACTIVE
+ITM00033,BrightLiving Laundry Detergent Large,BrightLiving,D20,Home,C202,Cleaning,S2021,Detergent,6.17,10.12,ACTIVE
+ITM00034,HomeEase Laundry Detergent Pro,HomeEase,D20,Home,C202,Cleaning,S2021,Detergent,18.37,25.39,ACTIVE
+ITM00035,BrightLiving Laundry Detergent Set of 3,BrightLiving,D20,Home,C202,Cleaning,S2021,Detergent,1.47,2.53,ACTIVE
+ITM00036,HomeEase Paper Towels Small,HomeEase,D20,Home,C202,Cleaning,S2022,Paper,27.14,37.91,ACTIVE
+ITM00037,BrightLiving Paper Towels Medium,BrightLiving,D20,Home,C202,Cleaning,S2022,Paper,2.89,5.21,ACTIVE
+ITM00038,HomeEase Paper Towels Large,HomeEase,D20,Home,C202,Cleaning,S2022,Paper,1.71,3.21,ACTIVE
+ITM00039,BrightLiving Paper Towels Pro,BrightLiving,D20,Home,C202,Cleaning,S2022,Paper,15.22,21.85,ACTIVE
+ITM00040,HomeEase Paper Towels Set of 3,HomeEase,D20,Home,C202,Cleaning,S2022,Paper,16.37,25.75,ACTIVE
+ITM00041,Urban Thread Cotton Tee Black,Urban Thread,D30,Apparel,C301,Tops,S3011,Tees,2.10,3.85,ACTIVE
+ITM00042,Metro Line Cotton Tee White,Metro Line,D30,Apparel,C301,Tops,S3011,Tees,16.17,23.90,ACTIVE
+ITM00043,Urban Thread Cotton Tee Grey,Urban Thread,D30,Apparel,C301,Tops,S3011,Tees,7.30,12.74,ACTIVE
+ITM00044,Metro Line Cotton Tee Navy,Metro Line,D30,Apparel,C301,Tops,S3011,Tees,23.09,36.83,ACTIVE
+ITM00045,Urban Thread Cotton Tee Khaki,Urban Thread,D30,Apparel,C301,Tops,S3011,Tees,2.07,3.43,ACTIVE
+ITM00046,Metro Line Fleece Hoodie Black,Metro Line,D30,Apparel,C301,Tops,S3012,Hoodies,22.37,39.46,ACTIVE
+ITM00047,Urban Thread Fleece Hoodie White,Urban Thread,D30,Apparel,C301,Tops,S3012,Hoodies,7.15,10.61,ACTIVE
+ITM00048,Metro Line Fleece Hoodie Grey,Metro Line,D30,Apparel,C301,Tops,S3012,Hoodies,9.82,13.68,ACTIVE
+ITM00049,Urban Thread Fleece Hoodie Navy,Urban Thread,D30,Apparel,C301,Tops,S3012,Hoodies,17.20,29.70,ACTIVE
+ITM00050,Metro Line Fleece Hoodie Khaki,Metro Line,D30,Apparel,C301,Tops,S3012,Hoodies,12.55,20.97,ACTIVE
+ITM00051,Urban Thread Baseball Cap Black,Urban Thread,D30,Apparel,C302,Accessories,S3021,Hats,22.93,40.82,ACTIVE
+ITM00052,Metro Line Baseball Cap White,Metro Line,D30,Apparel,C302,Accessories,S3021,Hats,26.86,46.34,ACTIVE
+ITM00053,Urban Thread Baseball Cap Grey,Urban Thread,D30,Apparel,C302,Accessories,S3021,Hats,25.91,45.53,ACTIVE
+ITM00054,Metro Line Baseball Cap Navy,Metro Line,D30,Apparel,C302,Accessories,S3021,Hats,17.50,28.75,ACTIVE
+ITM00055,Urban Thread Baseball Cap Khaki,Urban Thread,D30,Apparel,C302,Accessories,S3021,Hats,16.48,24.35,ACTIVE
+ITM00056,Metro Line Canvas Tote Black,Metro Line,D30,Apparel,C302,Accessories,S3022,Bags,12.79,23.46,ACTIVE
+ITM00057,Urban Thread Canvas Tote White,Urban Thread,D30,Apparel,C302,Accessories,S3022,Bags,6.21,10.09,ACTIVE
+ITM00058,Metro Line Canvas Tote Grey,Metro Line,D30,Apparel,C302,Accessories,S3022,Bags,7.46,12.27,ACTIVE
+ITM00059,Urban Thread Canvas Tote Navy,Urban Thread,D30,Apparel,C302,Accessories,S3022,Bags,3.22,4.91,ACTIVE
+ITM00060,Metro Line Canvas Tote Khaki,Metro Line,D30,Apparel,C302,Accessories,S3022,Bags,19.63,32.83,ACTIVE

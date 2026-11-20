@@ -1,0 +1,103 @@
+
+-- GOLD: DIM_ITEM
+-- CATEGORY_KY change = SCD Type 2
+-- ITEM_NAME / BRAND change = SCD Type 1
+
+-- Step 1: Apply SCD1 corrections across all versions
+UPDATE RETAIL_DW.GOLD.DIM_ITEM t
+SET
+    ITEM_NAME = s.ITEM_NAME,
+    BRAND = s.BRAND,
+    REC_UPDT_TS = CURRENT_TIMESTAMP(),
+    BATCH_ID = s.BATCH_ID
+FROM (
+    SELECT
+        ITEM_ID,
+        ITEM_NAME,
+        BRAND,
+        BATCH_ID
+    FROM RETAIL_DW.SILVER.TMP_ITEM
+    WHERE DROP_DATE = TO_DATE('{BUSINESS_DATE}')
+      AND BATCH_ID = {BATCH_ID}
+    QUALIFY ROW_NUMBER() OVER (
+        PARTITION BY ITEM_ID
+        ORDER BY REC_INS_TS DESC
+    ) = 1
+) s
+WHERE t.ITEM_ID = s.ITEM_ID
+  AND (
+      COALESCE(t.ITEM_NAME, '') <> COALESCE(s.ITEM_NAME, '')
+      OR COALESCE(t.BRAND, '') <> COALESCE(s.BRAND, '')
+  );
+
+-- Step 2: Close the current version only when category changes
+UPDATE RETAIL_DW.GOLD.DIM_ITEM t
+SET
+    CURR_FLG = FALSE,
+    EFF_TO_DT = DATEADD(
+        DAY, -1, TO_DATE('{BUSINESS_DATE}')
+    ),
+    REC_UPDT_TS = CURRENT_TIMESTAMP(),
+    BATCH_ID = {BATCH_ID}
+FROM (
+    SELECT
+        i.ITEM_ID,
+        c.CATEGORY_KY
+    FROM RETAIL_DW.SILVER.TMP_ITEM i
+    JOIN RETAIL_DW.GOLD.DIM_CATEGORY c
+        ON i.CATEGORY_ID = c.CATEGORY_ID
+    WHERE i.DROP_DATE = TO_DATE('{BUSINESS_DATE}')
+      AND i.BATCH_ID = {BATCH_ID}
+    QUALIFY ROW_NUMBER() OVER (
+        PARTITION BY i.ITEM_ID
+        ORDER BY i.REC_INS_TS DESC
+    ) = 1
+) s
+WHERE t.ITEM_ID = s.ITEM_ID
+  AND t.CURR_FLG = TRUE
+  AND t.CATEGORY_KY <> s.CATEGORY_KY;
+
+-- Step 3: Insert only new items or new SCD2 versions
+INSERT INTO RETAIL_DW.GOLD.DIM_ITEM (
+    ITEM_KY,
+    ITEM_ID,
+    ITEM_NAME,
+    BRAND,
+    CATEGORY_KY,
+    CURR_FLG,
+    EFF_FROM_DT,
+    EFF_TO_DT,
+    REC_INS_TS,
+    SRC_SYS_CD,
+    BATCH_ID
+)
+SELECT
+    RETAIL_DW.GOLD.SEQ_ITEM_KY.NEXTVAL,
+    s.ITEM_ID,
+    s.ITEM_NAME,
+    s.BRAND,
+    c.CATEGORY_KY,
+    TRUE,
+    s.DROP_DATE,
+    TO_DATE('9999-12-31'),
+    CURRENT_TIMESTAMP(),
+    NULL,
+    s.BATCH_ID
+FROM (
+    SELECT *
+    FROM RETAIL_DW.SILVER.TMP_ITEM
+    WHERE DROP_DATE = TO_DATE('{BUSINESS_DATE}')
+      AND BATCH_ID = {BATCH_ID}
+    QUALIFY ROW_NUMBER() OVER (
+        PARTITION BY ITEM_ID
+        ORDER BY REC_INS_TS DESC
+    ) = 1
+) s
+JOIN RETAIL_DW.GOLD.DIM_CATEGORY c
+    ON s.CATEGORY_ID = c.CATEGORY_ID
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM RETAIL_DW.GOLD.DIM_ITEM existing
+    WHERE existing.ITEM_ID = s.ITEM_ID
+      AND existing.CURR_FLG = TRUE
+);
